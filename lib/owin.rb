@@ -25,7 +25,7 @@ module Owin
 			puts "-----> done"
 		end
 
-		File.glob("#{mono_path}/*")
-		
+		Dir.glob("#{mono_path}/*")
+
 	end
 end
