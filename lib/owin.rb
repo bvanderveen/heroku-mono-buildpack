@@ -19,7 +19,7 @@ module Owin
 
 		FileUtils.mkdir_p(mono_path)
 		Dir.chdir(mono_path) do
-			run("curl #{mono_binaries_url} -o - | tar xzf -")
+			run("curl #{mono_binaries_url} -s -o - | tar xzf -")
 		end
 	end
 end
