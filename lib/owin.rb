@@ -1,6 +1,7 @@
 require 'uri'
 require 'net/http'
 require 'fileutils'
+require 'yaml'
 
 def run(command)
 	%x{ #{command} 2>&1 }
@@ -25,7 +26,14 @@ module Owin
 			puts "-----> done"
 		end
 
+		puts "-----> extracted these files:"
 		Dir.glob("#{mono_path}/*")
+		puts "-----> eh?"
+	end
 
+	def self.release(build_dir)
+		{
+			"config_vars" => "#{build_dir}/_mono/bin:bin:/usr/local/bin:/usr/bin:/bin"
+		}.to_yaml
 	end
 end

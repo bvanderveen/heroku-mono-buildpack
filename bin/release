@@ -1,10 +1,8 @@
 #!/usr/bin/env ruby
 # bin/release <build-dir>
 
-require 'yaml'
+$:.unshift File.expand_path("../../lib", __FILE__)
+require "owin"
 
 build_dir = ARGV.first
-puts 
-{
-	"config_vars" => "#{build_dir}/_mono/bin:bin:/usr/local/bin:/usr/bin:/bin"
-}.to_yaml
+Owin.release(build_dir)
