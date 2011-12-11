@@ -22,7 +22,7 @@ module Owin
 
 		Dir.chdir(mono_path) do
 			puts "-----> Fetching mono tarball"
-			run("curl #{mono_binaries_url} -s -o mono.tgz")
+			run("curl #{mono_binaries_url} -o mono.tgz")
 			puts "-----> Extracting..."
 			run("tar xzf mono.tgz")
 		end
