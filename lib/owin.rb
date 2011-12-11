@@ -19,9 +19,10 @@ module Owin
 
 		FileUtils.mkdir_p(mono_path)
 
-		puts "Fetching mono binaries"
 		Dir.chdir(mono_path) do
+			puts "-----> Fetching and extracting mono..."
 			run("curl #{mono_binaries_url} -s -o - | tar xzf -")
+			puts "-----> done"
 		end
 	end
 end
