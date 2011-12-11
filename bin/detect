@@ -7,7 +7,7 @@ require "owin"
 build_dir = ARGV.first
 
 if Owin.detect(build_dir)
-  puts "mono"
+  puts "Mono"
   exit 0
 else
   puts "no"
