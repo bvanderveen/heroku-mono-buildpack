@@ -8,7 +8,7 @@ end
 module Owin
 	def self.detect(build_dir)
 		puts '-----> attempting to detect mono'
-		Dir.chdir(dir)
+		Dir.chdir(build_dir)
 
 		return File.exists? "usemono"
 	end
