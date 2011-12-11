@@ -5,10 +5,9 @@ def run(command)
 	%x{ #{command} 2>&1 }
 end
 
-
-
 module Owin
 	def self.detect(build_dir)
+		puts '-----> attempting to detect mono'
 		Dir.chdir(dir)
 
 		return File.exists? "usemono"
