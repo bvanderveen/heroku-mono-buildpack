@@ -18,6 +18,8 @@ module Owin
 		mono_path = File.join(build_dir, "_mono")
 
 		FileUtils.mkdir_p(mono_path)
+
+		puts "Fetching mono binaries"
 		Dir.chdir(mono_path) do
 			run("curl #{mono_binaries_url} -s -o - | tar xzf -")
 		end
