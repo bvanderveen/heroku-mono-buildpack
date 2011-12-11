@@ -4,7 +4,7 @@ require 'fileutils'
 require 'yaml'
 
 def run(command)
-	%x{ #{command} 2>&1 }
+	system "#{command} 2>&1"
 end
 
 module Owin
