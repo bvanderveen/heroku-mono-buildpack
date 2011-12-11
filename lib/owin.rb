@@ -1,5 +1,6 @@
 require 'uri'
 require 'net/http'
+require 'fileutils'
 
 def run(command)
 	%x{ #{command} 2>&1 }
