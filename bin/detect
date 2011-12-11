@@ -6,8 +6,8 @@ require "owin"
 
 build_dir = ARGV.first
 
-if pack = Owin.detect(build_dir)
-  puts pack.name
+if Owin.detect(build_dir)
+  puts "mono"
   exit 0
 else
   puts "no"
