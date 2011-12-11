@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+# bin/release <build-dir>
+
+require 'yaml'
+
+build_dir = ARGV.first
+puts 
+{
+	"config_vars" => "#{build_dir}/_mono/bin:bin:/usr/local/bin:/usr/bin:/bin"
+}.to_yaml

@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+# bin/detect <build_dir>
+
+$:.unshift File.expand_path("../../lib", __FILE__)
+require "owin"
+
+build_dir = ARGV.first
+
+if pack = Owin.detect(build_dir)
+  puts pack.name
+  exit 0
+else
+  puts "no"
+  exit 1
+end
