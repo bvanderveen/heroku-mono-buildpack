@@ -24,5 +24,8 @@ module Owin
 			run("curl #{mono_binaries_url} -s -o - | tar xzf -")
 			puts "-----> done"
 		end
+
+		File.glob("#{mono_path}/*")
+		
 	end
 end
